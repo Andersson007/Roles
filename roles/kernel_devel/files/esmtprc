@@ -1,0 +1,5 @@
+identity "andrew.a.klychkov@gmail.com"
+hostname smtp.gmail.com:587
+username "andrew.a.klychkov@gmail.com"
+password ""
+starttls required 
