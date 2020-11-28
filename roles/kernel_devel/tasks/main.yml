@@ -1,0 +1,13 @@
+- name: Install tools
+  package:
+    name: '{{ tools_to_install }}'
+
+- name: Put .vimrc
+  copy:
+    src: vimrc
+    dest: ~/.vimrc
+
+- name: Put .gitconfig
+  copy:
+    src: gitconfig
+    dest: ~/.gitconfig

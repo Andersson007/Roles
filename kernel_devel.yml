@@ -1,0 +1,5 @@
+- hosts: kernel_devel
+  gather_facts: no
+  become: yes
+  roles:
+    - kernel_devel
