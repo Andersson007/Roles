@@ -4,10 +4,11 @@ set from="Andrew Klychkov <andrew.a.klychkov@gmail.com>"
 set use_from=yes
 set edit_headers=yes
 
-set mbox_type=Maildir
-set folder="~/Maildir"
-set mask="!^\\.[^.]"
-set mbox="~/Maildir"
-set record="+.Sent"
-set postponed="+.Drafts"
-set spoolfile="~/Maildir"
+set imap_user = "andrew.a.klychkov@gmail.com"
+set imap_pass = ""
+set timeout = 10
+
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail/Sent Mail"

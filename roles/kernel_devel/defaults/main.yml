@@ -3,3 +3,4 @@ tools_to_install:
 - vim
 - esmtp
 - mutt
+#- kdiff3
