@@ -1,8 +1,11 @@
-set sendmail="/usr/bin/esmtp"
-set envelope_from=yes
-set from="Andrew Klychkov <andrew.a.klychkov@gmail.com>"
-set use_from=yes
-set edit_headers=yes
+set envelope_from = yes
+set from = "Andrew Klychkov <andrew.a.klychkov@gmail.com>"
+set use_from = yes
+set edit_headers = yes
+set editor = vim
+
+set smtp_url = "smtps://andrew.a.klychkov@gmail.com@smtp.gmail.com"
+set smtp_pass = ""
 
 set imap_user = "andrew.a.klychkov@gmail.com"
 set imap_pass = ""

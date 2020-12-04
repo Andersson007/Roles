@@ -12,17 +12,7 @@
     src: gitconfig
     dest: ~/.gitconfig
 
-- name: Put .esmtprc
-  copy:
-    src: esmtp
-    dest: ~/.esmtprc
-
 - name: Put .muttrc
   copy:
     src: esmtp
     dest: ~/.muttrc
-
-- name: Create mailbox dir
-  file:
-    path: ~/Maildir
-    state: directory

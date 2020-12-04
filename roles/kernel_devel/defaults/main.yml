@@ -1,6 +1,5 @@
 tools_to_install:
 - git
 - vim
-- esmtp
 - mutt
 #- kdiff3
