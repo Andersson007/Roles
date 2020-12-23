@@ -1,0 +1,44 @@
+- name: Install tools
+  package:
+    name: '{{ tools_to_install }}'
+  ignore_errors: yes
+
+- name: Put .vimrc
+  copy:
+    src: vimrc
+    dest: ~/.vimrc
+
+- name: Put .gitconfig
+  copy:
+    src: gitconfig
+    dest: ~/.gitconfig
+
+- name: Change history size
+  replace:
+    path: /etc/profile
+    regexp: '^HISTSIZE=.*'
+    replace: 'HISTSIZE={{ history_size }}'
+
+# Go related:
+- name: Create Golang dir
+  file:
+    path: '{{ go_dir }}'
+    state: directory
+
+- name: Download Golang
+  get_url:
+    url: '{{ go_url }}'
+    dest: '{{ go_tarball }}'
+
+- name: Unpack Golang tarball
+  unarchive:
+    remote_src: yes
+    src: '{{ go_tarball }}'
+    dest: '{{ go_dir }}'
+
+- name: Create go symlink
+  file:
+    force: yes
+    src: '{{ go_bin }}'
+    dest: '{{ go_symlink_path }}'
+    state: link

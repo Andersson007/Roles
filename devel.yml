@@ -1,0 +1,5 @@
+- hosts: devel
+  gather_facts: no
+  become: yes
+  roles:
+    - devel

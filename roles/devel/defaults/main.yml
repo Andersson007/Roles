@@ -1,0 +1,12 @@
+tools_to_install:
+- git
+- vim
+
+history_size: 10000
+
+go_ver: '1.15.6'
+go_url: https://golang.org/dl/go1.15.6.linux-amd64.tar.gz
+go_tarball: '/tmp/go{{ go_ver }}.linux-amd64.tar.gz'
+go_dir: '/usr/local/go{{ go_ver }}'
+go_bin: '{{ go_dir }}/go/bin/go'
+go_symlink_path: '/usr/bin/go'
